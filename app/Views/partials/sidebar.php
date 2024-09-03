@@ -21,7 +21,7 @@
             <div><a href="/salvos"><i class="fa-solid fa-bookmark"></i>Itens salvos</a></div>
         </dt>
         <dt>
-            <div><a href="/profile/joao_wildlife"><i class="fa-solid fa-user"></i>Perfil</a></div>
+            <div><a href="/profile/<?= session('user')->tag ?>"><i class="fa-solid fa-user"></i>Perfil</a></div>
         </dt>
         <dt>
             <div><a href=""><i class="fa-solid fa-bars"></i>Mais</a></div>

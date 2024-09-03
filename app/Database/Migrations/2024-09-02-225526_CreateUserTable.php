@@ -16,6 +16,8 @@ class CreateUserTable extends Migration
             'deleted_at'=>['type'=>'DATETIME'],
 
             'name'=>['type'=>'VARCHAR','constraint'=>35],
+            'email'=>['type'=>'VARCHAR','constraint'=>255],
+            'senha'=>['type'=>'VARCHAR','constraint'=>255],
             'description'=>['type'=>'TEXT'],
             'followers'=>['type'=>'INT',"constraint"=>11],
             'following'=>['type'=>'INT',"constraint"=>11],

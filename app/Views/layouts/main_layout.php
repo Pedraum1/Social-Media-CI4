@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--PAGE TITLE-->
-    <title><?= $this->renderSection('titulo') ?></title>
+    <title>Tcholas Social | <?= $this->renderSection('titulo') ?></title>
 
     <!--APP CSS-->
     <link rel="stylesheet" href="<?= base_url('assets/css/style_main.css') ?>">
