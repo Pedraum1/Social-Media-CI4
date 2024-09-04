@@ -8,7 +8,7 @@
             </a>
         </div>
         <div class="col-md-11">
-            <textarea placeholder="O que está acontecendo?" maxlength="150" rows='1' name="commentInput" oninput="autoGrow(this); countCharacters(this);"></textarea>
+            <textarea placeholder="Comentar" maxlength="150" rows='1' name="commentInput" oninput="autoGrow(this); countCharacters(this);"></textarea>
             <div class="text-end">
                 <p id="charCount"></p>
                 <p class="text-danger">
@@ -35,7 +35,7 @@
             <?= form_open('comment_submit') ?>
             <input type="hidden" name="originalInput" value="<?= $post->id ?>" >
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Criar nova publicação</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Comentar</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -47,7 +47,7 @@
                             </a>
                         </div>
                         <div class="col-10">
-                            <textarea placeholder="O que está acontecendo?" maxlength="150" rows='3' name="commentInput" oninput="autoGrow(this); countCharacters(this);"></textarea>
+                            <textarea placeholder="Comentar" maxlength="150" rows='3' name="commentInput" oninput="autoGrow(this); countCharacters(this);"></textarea>
                             <div class="text-end">
                                 <p id="charCount"></p>
                                 <p class="text-danger text-start">

@@ -292,3 +292,7 @@ h6.tweet-name a:hover{
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+
+.fa-solid.fa-heart{
+  color: var(--yellow);
+}

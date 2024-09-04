@@ -18,9 +18,14 @@ $routes->group('',['filter'=>'unlogged'],function($routes){
 
 $routes->get('/', 'Main::index');
 $routes->get('/profile/(:any)', 'Main::profile/$1');
+$routes->get('/notificacoes','Main::notificacao');
 $routes->get('/auth/logout','Auth::logout');
-$routes->get('/post/(:alphanum)','Posts::index/$1');
-$routes->post('/post_submit','Posts::postSubmit');
-$routes->post('/comment_submit','Posts::commentSubmit');
+$routes->group('/post/',function($routes){
+    $routes->get('(:alphanum)','Posts::index/$1');
+    $routes->post('post_submit','Posts::postSubmit');
+    $routes->post('comment_submit','Posts::commentSubmit');  
+    $routes->get('(:alphanum)/like','Posts::like/$1');
+    $routes->get('(:alphanum)/dislike','Posts::dislike/$1');
+});
 
 });

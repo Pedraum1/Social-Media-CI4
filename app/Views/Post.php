@@ -51,13 +51,17 @@ Post de <?= $post->writer ?>
             </div>
             <div class="row justify-content-start actions-row">
                 <div class="col-2 text-center icon">
-                    <a href="/"><i class="fa-regular fa-comment"></i><?= format($post->comments) ?></a>
+                    <a href=""><i class="fa-regular fa-comment"></i><?= format($post->comments) ?></a>
                 </div>
                 <div class="col-2 text-center icon">
-                    <a href="/"><i class="fa-solid fa-repeat"></i><?= format($post->shares) ?></a>
+                    <a href=""><i class="fa-solid fa-repeat"></i><?= format($post->shares) ?></a>
                 </div>
                 <div class="col-2 text-center icon">
-                    <a href="/"><i class="fa-regular fa-heart"></i><?= format($post->likes) ?></a>
+                    <?php if ($liked): ?>
+                            <a href="<?= $post->id ?>/dislike"><i class="fa-solid fa-heart"></i><?= format($post->likes) ?></a>
+                        <?php else: ?>
+                            <a href="<?= $post->id ?>/like"><i class="fa-regular fa-heart"></i><?= format($post->likes) ?></a>
+                    <?php endif; ?>
                 </div>
                 <div class="col-2 text-center icon">
                     <a href="/"><i class="fa-regular fa-bookmark"></i></a>

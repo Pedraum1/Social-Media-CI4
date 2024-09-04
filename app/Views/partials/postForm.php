@@ -1,4 +1,4 @@
-<?= form_open('post_submit') ?>
+<?= form_open('/post/post_submit') ?>
 <div class="p-4 pb-2 postForm-wrap d-md-block d-none">
     <div class="row justify-content-center">
         <div class="col-md-1 text-center d-md-block d-none">
@@ -31,7 +31,7 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <?= form_open('post_submit') ?>
+            <?= form_open('/post/post_submit') ?>
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Criar nova publicação</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

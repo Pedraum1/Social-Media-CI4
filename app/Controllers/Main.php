@@ -46,4 +46,8 @@ class Main extends BaseController
         $data = ['user' => $user,'posts'=>$posts,'post_erros'=>$post_erros,'data'=>Time::now()];
         return view('profile',$data);
     }
+
+    public function notificacao(){
+        return view('notificacao');
+    }
 }
