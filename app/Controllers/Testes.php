@@ -1,13 +1,15 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
+use CodeIgniter\I18n\Time;
 
-class Posts extends BaseController
+class Testes extends BaseController
 {
     public function index()
     {
-        //
+        return print_r(encrypt('ababa'));
     }
 }

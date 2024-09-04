@@ -6,6 +6,8 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
+$routes->get('/teste','Testes::index');
+
 $routes->group('/auth/',['filter'=>'logged'], function($routes){
     $routes->get('','Auth::index');
     $routes->post('login_submit','Auth::login');
@@ -16,5 +18,7 @@ $routes->group('',['filter'=>'unlogged'],function($routes){
 
 $routes->get('/', 'Main::index');
 $routes->get('/profile/(:any)', 'Main::profile/$1');
+$routes->get('/auth/logout','Auth::logout');
+$routes->get('/post/(:alphanum)','Posts::index');
 
 });

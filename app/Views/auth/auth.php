@@ -46,11 +46,7 @@
           <?php endif; ?>
         </form>
         <form action="/auth/register_submit" method="post" class="sign-up-form">
-          <img src="<?= base_url('assets/img/banner_logo.png') ?>" alt="" class="img-fluid mb-5">
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" name="userInput" placeholder="Username" />
-          </div>
+          <h1>Registre-se</h1>
           <div class="input-field">
             <i class="fas fa-envelope"></i>
             <input type="email" name="emailInput" placeholder="Email" />
@@ -58,6 +54,18 @@
           <div class="input-field">
             <i class="fas fa-lock"></i>
             <input type="password" name="passInput" placeholder="Password" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="passConfirmInput" placeholder="Confirm Password" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="rext" name="nameInput" placeholder="Nome de usuário" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="text" name="tagInput" placeholder="Tag (@)" />
           </div>
           <input type="submit" name="submit" class="btn" value="Sign up" />
         </form>
