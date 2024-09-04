@@ -20,7 +20,9 @@
                 </div>
             </div>
             <div class="col-3 mt-3">
+                <?php if($user->id != session('user')->id):?>
                 <a href="/follow/<?= $user->tag ?>" class="btn btn-tweet"><h6>Seguir <i class="fa-solid fa-plus"></i></h6></a>
+                <?php endif;?>
             </div>
         </div>
 </div>
