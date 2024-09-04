@@ -33,7 +33,7 @@
 </div>
 
 <div class="d-md-none">
-    <nav class="navbar navbar-dark">
+    <nav class="navbar navbar-dark border-bottom">
         <div class="container-fluid">
 
             <a class="navbar-brand" href="/profile/<?= session('user')->tag ?>"><img class="profile-img" src="<?= base_url('assets/img/noProfile.webp') ?>"></a>

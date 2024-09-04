@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\PostModel;
 use App\Models\UserModel;
+use CodeIgniter\I18n\Time;
 
 class Main extends BaseController
 {
@@ -11,7 +12,7 @@ class Main extends BaseController
     {
         $posts_model = new PostModel();
         $user_model = new UserModel();
-        $posts = $posts_model->orderBy('created_at','DESC')->findAll();
+        $posts = $posts_model->where('type',1)->orderBy('created_at','DESC')->findAll();
 
         $post_erros = session()->getFlashdata('post_erros');
 
@@ -21,7 +22,7 @@ class Main extends BaseController
             $post->writer = $user->name;
             $post->writer_tag = $user->tag;
         }
-        $data = ['posts'=>$posts,'post_erros'=>$post_erros];
+        $data = ['posts'=>$posts,'post_erros'=>$post_erros,'data'=>Time::now()];
 
         return view('homepage', $data);
     }
@@ -42,7 +43,7 @@ class Main extends BaseController
             $post->writer_tag = $user->tag;
         }
 
-        $data = ['user' => $user,'posts'=>$posts,'post_erros'=>$post_erros];
+        $data = ['user' => $user,'posts'=>$posts,'post_erros'=>$post_erros,'data'=>Time::now()];
         return view('profile',$data);
     }
 }

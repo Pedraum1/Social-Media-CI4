@@ -52,41 +52,30 @@ function numToMonth($stringDate){
 function dataBR($stringDate){
 
     $ano = substr($stringDate, 0, 4);
-    $mes = substr($stringDate, 5, 2);
+    //$mes = substr($stringDate, 5, 2);
     $mesExtenso = numToMonth($stringDate);
     $dia = substr($stringDate, 8, 2);
-    $hora = substr($stringDate, 11, 2);
-    $min = substr($stringDate, 14, 2);
-
+    //$hora = substr($stringDate, 11, 2);
+    //$min = substr($stringDate, 14, 2);
+    
     return ($dia.'/'.$mesExtenso.'/'.$ano);
 }
-#0123456789
+
 #2024-09-03 21:28:04
 function timeDiffFormat($date1,$date2){
-    $data1 = [
-        'ano'     => (integer)substr($date1,0,4),
-        'mes'     => (integer)substr($date1,5,2),
-        'dia'     => (integer)substr($date1,8,2),
-        'hora'    => (integer)substr($date1,11,2),
-        'minuto'  => (integer)substr($date1,14,2),
-        'segundo' => (integer)substr($date1,17,2),
-    ];
+    
+    $date1 = Time::parse($date1);
+    $date2 = Time::parse($date2);
 
-    $data2 = [
-        'ano'     => (integer)substr($date2,0,4),
-        'mes'     => (integer)substr($date2,5,2),
-        'dia'     => (integer)substr($date2,8,2),
-        'hora'    => (integer)substr($date2,11,2),
-        'minuto'  => (integer)substr($date2,14,2),
-        'segundo' => (integer)substr($date2,17,2),
-    ];
-
-    $yearDiff = $data1['ano'] - $data2['ano'];
-    $monthDiff = $data1['mes'] - $data2['mes'];
-    $dayDiff = $data1['dia'] - $data2['dia'];
-    $hourDiff = $data1['hora'] - $data2['hora'];
-    $minutesDiff = $data1['minuto'] - $data2['minuto'];
-    $secondsDiff = $data1['segundo'] - $data2['segundo'];
+    
+    $diferenca = $date1->difference($date2);
+    
+    $yearDiff    = $diferenca->getYears();
+    $monthDiff   = $diferenca->getMonths();
+    $dayDiff     = $diferenca->getDays();
+    $hourDiff    = $diferenca->getHours();
+    $minutesDiff = $diferenca->getMinutes();
+    $secondsDiff = $diferenca->getSeconds();
 
     if($yearDiff > 0){
         return $yearDiff.' a';
@@ -111,7 +100,7 @@ function timeDiffFormat($date1,$date2){
 }
 
 function nowTimeDiff($date){
-    return timeDiffFormat(Time::now(),$date);
+    return timeDiffFormat($date,Time::now());
 }
 
 ?>

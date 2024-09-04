@@ -287,3 +287,8 @@ h6.tweet-name a:hover{
   color: var(--yellow);
   text-decoration: underline;
 }
+
+.post-limits{
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}

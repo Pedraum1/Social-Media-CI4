@@ -117,6 +117,8 @@ class Auth extends BaseController
         $email = $this->request->getPost('emailInput');
         $name  = $this->request->getPost('nameInput');
         $tag   = $this->request->getPost('tagInput');
+        $caracteres_error = [' ', ':', '/', '?', '#', '[', ']', '@', '!', '$', '&', "'", '(', ')', '*', '+', ',', ';', '=', '%', '"', '<', '>', '\\', '^', '{', '}', '|', '~', '`'];
+        $tag = str_replace($caracteres_error,'',$tag);
 
         $userdata = [
             'email'=>$email,
