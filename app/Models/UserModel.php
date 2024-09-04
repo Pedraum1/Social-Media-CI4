@@ -12,7 +12,7 @@ class UserModel extends Model
     protected $returnType       = 'object';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['created_at','updated_at','deleted_at','name','email','senha','description','followers','following','tag'];
+    protected $allowedFields    = [];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -43,17 +43,4 @@ class UserModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
-
-    public function verify_login($email,$senha){
-        $email = $this->where('email',$email)->first();
-
-        if($email){            
-            //find pass
-            $hashed_senha = password_hash($email->senha, PASSWORD_DEFAULT);
-            if(password_verify($senha, $hashed_senha)){
-                return $email;            
-            }
-        }
-        return false;
-    }
 }

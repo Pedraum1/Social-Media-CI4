@@ -47,11 +47,6 @@ p{
   font-style: normal;
 }
 
-.clear-link{
-  text-decoration: none;
-  color: var(--white);
-}
-
 /*========================================================*/
 
 .logo-link{
@@ -173,10 +168,9 @@ h6.tweet-name a:hover{
   color: var(--white);
 }
 
-.actions-row i .fa-comment,.fa-repeat,.fa-heart,.fa-chart-simple{
-  margin-right: 10px;
+.actions-row i .fa-comment,.fa-repeat,.fa-heart{
+  margin-right: 1rem;
 }
-
 
 .actions-row .icon a,span{
   transition: 250ms ease-out;
@@ -281,9 +275,4 @@ h6.tweet-name a:hover{
 
 .banner-box-content{
   margin-top: 85px;
-}
-
-.post-link{
-  color: var(--yellow);
-  text-decoration: underline;
 }

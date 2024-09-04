@@ -12,7 +12,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>1,
+            'writer'=>'Ana Silva',
             'text'=>'Hoje visitei as montanhas da Patagônia! Um lugar incrível, cheio de paisagens deslumbrantes. Recomendo a todos que amam a natureza. 🌄 #Aventura #Viagem',
             'comments'=>120,
             'shares'=>45,
@@ -23,7 +23,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>2,
+            'writer'=>'Carlos Pereira',
             'text'=>'Novo projeto no GitHub! Um site responsivo usando Tailwind CSS. Confiram e me digam o que acham! 🚀 #DevLife #OpenSource',
             'comments'=>75,
             'shares'=>20,
@@ -34,7 +34,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>3,
+            'writer'=>'Beatriz Souza',
             'text'=>'Estudando cardiologia esta semana! Alguém mais se interessa pelo funcionamento do coração? ❤️ #Medicina #Estudos',
             'comments'=>64,
             'shares'=>18,
@@ -45,7 +45,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>4,
+            'writer'=>'Ricardo Nunes',
             'text'=>'Novo vídeo de treino HIIT no canal! Queima de gordura intensa em apenas 20 minutos. Vamos juntos! 💥 #Fitness #Treino',
             'comments'=>89,
             'shares'=>35,
@@ -56,7 +56,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>6,
+            'writer'=>'Larissa Oliveira',
             'text'=>'Receita nova no blog: Tacos de grão-de-bico super fáceis e deliciosos. Confira e deixe seu feedback! 🌮 #ReceitasVegan #Culinária',
             'comments'=>56,
             'shares'=>22,
@@ -67,7 +67,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>5,
+            'writer'=>'João Marques',
             'text'=>'Capturei um raro momento de um tigre caçando no seu habitat natural. É incrível como a natureza é surpreendente! 🐅 #FotografiaDeNatureza #Wildlife',
             'comments'=>132,
             'shares'=>55,
@@ -78,7 +78,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>1,
+            'writer'=>'Ana Silva',
             'text'=>'A cidade de Ushuaia é encantadora! Muito frio, mas valeu cada segundo. 🥶 #Viagem #ExplorandoOMundo',
             'comments'=>40,
             'shares'=>18,
@@ -89,7 +89,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>2,
+            'writer'=>'Carlos Pereira',
             'text'=>'Dicas para iniciantes em JavaScript: comece pequeno, entenda o básico e pratique bastante. 💻 #Programação #DicasDev',
             'comments'=>47,
             'shares'=>16,
@@ -100,7 +100,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>3,
+            'writer'=>'Beatriz Souza',
             'text'=>'A importância de uma boa rotina de estudos: foco, disciplina e pausas estratégicas. Mantendo o ritmo por aqui! 💪 #VidaDeEstudante #Medicina',
             'comments'=>85,
             'shares'=>30,
@@ -111,7 +111,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>4,
+            'writer'=>'Ricardo Nunes',
             'text'=>'Bora treinar pernas hoje? Separei uma sequência de exercícios para você queimar! 🔥 #LegDay #Treino',
             'comments'=>94,
             'shares'=>40,
@@ -122,7 +122,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>6,
+            'writer'=>'Larissa Oliveira',
             'text'=>'Você sabia que o tofu pode ser usado de várias formas na cozinha? Hoje, fiz um prato incrível com tofu defumado. 🍽️ #CulináriaVegan #Tofu',
             'comments'=>44,
             'shares'=>15,
@@ -133,7 +133,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>5,
+            'writer'=>'João Marques',
             'text'=>'O pôr do sol na savana é um dos momentos mais bonitos que já capturei. A natureza nunca decepciona. 🌅 #AventuraFotográfica #Natureza',
             'comments'=>101,
             'shares'=>48,
@@ -144,7 +144,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>1,
+            'writer'=>'Ana Silva',
             'text'=>'Conhecendo novos amigos de diferentes culturas durante minhas viagens. O mundo é um lugar maravilhoso. 🌍 #IntercâmbioCultural #NovasAmizades',
             'comments'=>88,
             'shares'=>33,
@@ -155,7 +155,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>2,
+            'writer'=>'Carlos Pereira',
             'text'=>'Teste o seu conhecimento em CSS com este quiz rápido que criei. Pronto para o desafio? 🎯 #CSS #DesenvolvimentoWeb',
             'comments'=>59,
             'shares'=>28,
@@ -166,7 +166,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>3,
+            'writer'=>'Beatriz Souza',
             'text'=>'O estágio está sendo uma experiência incrível! Cada dia aprendendo algo novo e me apaixonando mais pela medicina. 🏥 #Estágio #VidaDeMedEstudante',
             'comments'=>122,
             'shares'=>52,
@@ -177,7 +177,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>4,
+            'writer'=>'Ricardo Nunes',
             'text'=>'Vamos focar em uma alimentação equilibrada essa semana? O que você come define sua saúde! 🍎 #Nutrição #VidaSaudável',
             'comments'=>80,
             'shares'=>29,
@@ -188,7 +188,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>6,
+            'writer'=>'Larissa Oliveira',
             'text'=>'Se você ama bolo de chocolate, precisa provar esta versão vegana que acabei de postar! É tão boa quanto a tradicional. 🎂 #ReceitaVegan #CulináriaConsciente',
             'comments'=>65,
             'shares'=>24,
@@ -199,7 +199,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>5,
+            'writer'=>'João Marques',
             'text'=>'Os pássaros na floresta amazônica são um espetáculo à parte. Cada clique é uma surpresa. 🦜 #FotografiaDeAves #NaturezaPura',
             'comments'=>113,
             'shares'=>49,
@@ -210,7 +210,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>1,
+            'writer'=>'Ana Silva',
             'text'=>'Planejando meu próximo destino! Qual país vocês acham que eu deveria explorar em seguida? 🌏 #ViajarÉViver #PróximasAventuras',
             'comments'=>154,
             'shares'=>60,
@@ -221,7 +221,7 @@ class PostSeeder extends Seeder
         $this->db->table('posts')->insert([
             'created_at'=>Time::now(),
             'updated_at'=>Time::now(),
-            'writer'=>2,
+            'writer'=>'Carlos Pereira',
             'text'=>'Quando o código finalmente compila sem erros... essa sensação não tem preço! 😅 #DevLife #Programador',
             'comments'=>87,
             'shares'=>37,

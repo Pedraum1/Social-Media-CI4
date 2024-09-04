@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\PostModel;
 use App\Models\UserModel;
 
-class Main extends BaseController
+class Home extends BaseController
 {
     public function index()
     {
