@@ -33,10 +33,10 @@
 </div>
 
 <div class="d-md-none">
-    <nav class="navbar navbar-dark">
+    <nav class="navbar navbar-dark border-bottom">
         <div class="container-fluid">
 
-            <a class="navbar-brand" href="#"><img class="profile-img" src="<?= base_url('assets/img/noProfile.webp') ?>"></a>
+            <a class="navbar-brand" href="/profile/<?= session('user')->tag ?>"><img class="profile-img" src="<?= base_url('assets/img/noProfile.webp') ?>"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars" style="color: #FFFFFF;"></i>
             </button>
@@ -70,7 +70,7 @@
                             <div><a href="/salvos"><i class="fa-solid fa-bookmark"></i>Itens salvos</a></div>
                         </dt>
                         <dt>
-                            <div><a href="/perfil"><i class="fa-solid fa-user"></i>Perfil</a></div>
+                            <div><a href="/profile/<?= session('user')->tag ?>"><i class="fa-solid fa-user"></i>Perfil</a></div>
                         </dt>
                         <dt>
                             <div><a href=""><i class="fa-solid fa-bars"></i>Mais</a></div>

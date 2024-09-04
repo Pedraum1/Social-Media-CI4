@@ -99,11 +99,11 @@ class Auth extends BaseController
             ],
             'tagInput' => [
                 'label' => 'Tag',
-                'rules' => 'required|min_length[4]|max_length[10]|is_unique[users.tag]',
+                'rules' => 'required|min_length[4]|max_length[12]|is_unique[users.tag]',
                 'errors' => [
                     'required'   => 'A Tag é obrigatória, preencha corretamente!',
                     'min_length' => 'A Tag deve ter mais de 4 caracteres, preencha corretamente!',
-                    'max_length' => 'A Tag deve ter menos de 10 caracteres, preencha corretamente!',
+                    'max_length' => 'A Tag deve ter menos de 12 caracteres, preencha corretamente!',
                     'is_unique'  => 'Sinto muito, a tag inserida já está sendo usada por alguém ;('
                 ]
             ]
@@ -117,6 +117,8 @@ class Auth extends BaseController
         $email = $this->request->getPost('emailInput');
         $name  = $this->request->getPost('nameInput');
         $tag   = $this->request->getPost('tagInput');
+        $caracteres_error = [' ', ':', '/', '?', '#', '[', ']', '@', '!', '$', '&', "'", '(', ')', '*', '+', ',', ';', '=', '%', '"', '<', '>', '\\', '^', '{', '}', '|', '~', '`'];
+        $tag = str_replace($caracteres_error,'',$tag);
 
         $userdata = [
             'email'=>$email,
