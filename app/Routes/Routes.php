@@ -20,5 +20,6 @@ $routes->get('/', 'Main::index');
 $routes->get('/profile/(:any)', 'Main::profile/$1');
 $routes->get('/auth/logout','Auth::logout');
 $routes->get('/post/(:alphanum)','Posts::index');
+$routes->post('/post_submit','Posts::postSubmit');
 
 });
