@@ -120,6 +120,12 @@ class Auth extends BaseController
         $caracteres_error = [' ', ':', '/', '?', '#', '[', ']', '@', '!', '$', '&', "'", '(', ')', '*', '+', ',', ';', '=', '%', '"', '<', '>', '\\', '^', '{', '}', '|', '~', '`'];
         $tag = str_replace($caracteres_error,'',$tag);
 
+        foreach($this->user_model->findAll() as $user){
+            if($user->tag == $tag){
+                return redirect()->back()->withInput()->with('erros', ['Sinto muito, a tag inserida já está sendo usada por alguém ;(']); //REDIRECIONANDO
+            }
+        }
+
         $userdata = [
             'email'=>$email,
             'senha'=>$senha,

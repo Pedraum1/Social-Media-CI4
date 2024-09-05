@@ -206,7 +206,7 @@ h6.tweet-name a:hover{
 }
 
 .modal-header,.modal-body,.modal-footer,.modal-content{
-  background-color: var(--gray) !important;
+  background-color: var(--dark) !important;
   border: none;
 }
 
@@ -295,4 +295,50 @@ h6.tweet-name a:hover{
 
 .fa-solid.fa-heart{
   color: var(--yellow);
+}
+
+.modal-dialog.modal-profile{
+  position: relative;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  margin: 0;
+}
+
+.modal-profile .modal-body img.profile-banner{
+  height: 175px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.modal-profile .modal-body img.profile-icon{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: relative;
+  translate: -50% -50%;
+  left: 20%;
+  top: -50%;
+}
+
+input.profile-edit,textarea.profile-edit{
+  border: none;
+  background-color: var(--gray);
+  padding: 20px;
+  border-radius: 25px;
+  outline: 0;
+  color: var(--white);
+  height: 50px;
+  width: 90%;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+  transition: 200ms ease-out;
+}
+
+input.profile-edit:focus,textarea.profile-edit{
+  background-color: var(--gray);
+}
+
+input.profile-edit::placeholder,textarea.profile-edit::placeholder{
+  color: var(--white);
 }

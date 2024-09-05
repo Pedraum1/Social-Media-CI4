@@ -17,7 +17,13 @@ $routes->group('/auth/',['filter'=>'logged'], function($routes){
 $routes->group('',['filter'=>'unlogged'],function($routes){
 
 $routes->get('/', 'Main::index');
-$routes->get('/profile/(:any)', 'Main::profile/$1');
+
+$routes->group('/profile/',function($routes){
+    $routes->get('(:any)', 'Profile::profile/$1');
+    $routes->post('(:any)/edit', 'Profile::profile_update/$1');
+    
+});
+
 $routes->get('/notificacoes','Main::notificacao');
 $routes->get('/auth/logout','Auth::logout');
 $routes->group('/post/',function($routes){

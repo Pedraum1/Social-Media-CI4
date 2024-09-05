@@ -27,27 +27,9 @@ class Main extends BaseController
         return view('homepage', $data);
     }
 
-    public function profile($tag){       
-
-        $user_model = new UserModel();
-        $posts_model = new PostModel();
-
-        $post_erros = session()->getFlashdata('post_erros');
-
-        $user = $user_model->where('tag',$tag)->first();
-
-        $posts = $posts_model->where('writer',$user->id)->orderBy('created_at','DESC')->findAll();
-        
-        foreach($posts as $post){
-            $post->writer = $user->name;
-            $post->writer_tag = $user->tag;
-        }
-
-        $data = ['user' => $user,'posts'=>$posts,'post_erros'=>$post_erros,'data'=>Time::now()];
-        return view('profile',$data);
-    }
-
     public function notificacao(){
         return view('notificacao');
     }
+
+    public function profile(){}
 }

@@ -25,7 +25,9 @@ class Posts extends BaseController
     public function index($post_id)
     {
         $post = $this->post_model->find($post_id);
-
+        $this->post_model->update($post_id,['views'=>(int)($post->views + 1)]);
+        $post = $this->post_model->find($post_id);
+        
         $comments_erros = session()->getFlashdata('comments_erros');
 
         $writer = $post->writer;

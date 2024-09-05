@@ -1,4 +1,4 @@
-<?= form_open('comment_submit') ?>
+<?= form_open('/post/comment_submit') ?>
 <input type="hidden" name="originalInput" value="<?= $post->id ?>" >
 <div class="p-4 pb-2 postForm-wrap d-md-block d-none">
     <div class="row justify-content-center">
@@ -32,7 +32,7 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <?= form_open('comment_submit') ?>
+            <?= form_open('/post/comment_submit') ?>
             <input type="hidden" name="originalInput" value="<?= $post->id ?>" >
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Comentar</h1>
